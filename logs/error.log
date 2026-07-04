@@ -1,0 +1,74 @@
+[02-Jul-2026 20:04:55 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in F:\RPL\Simaba_Projec\core\Model.php:23
+Stack trace:
+#0 F:\RPL\Simaba_Projec\core\Model.php(23): PDOStatement->execute(Array)
+#1 F:\RPL\Simaba_Projec\app\models\User.php(21): Model->query('SELECT u.*, r.r...', Array)
+#2 F:\RPL\Simaba_Projec\tests\run_tests.php(86): User->findByCredentials('admin')
+#3 F:\RPL\Simaba_Projec\tests\run_tests.php(36): TestSuite->testTC01()
+#4 F:\RPL\Simaba_Projec\tests\run_tests.php(522): TestSuite->run()
+#5 {main}
+  thrown in F:\RPL\Simaba_Projec\core\Model.php on line 23
+[02-Jul-2026 20:05:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "DetailPeminjaman" not found in F:\RPL\Simaba_Projec\tests\run_tests.php:312
+Stack trace:
+#0 F:\RPL\Simaba_Projec\tests\run_tests.php(46): TestSuite->testTC12()
+#1 F:\RPL\Simaba_Projec\tests\run_tests.php(522): TestSuite->run()
+#2 {main}
+  thrown in F:\RPL\Simaba_Projec\tests\run_tests.php on line 312
+[02-Jul-2026 20:07:29 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '999999999' for key 'nim_nip' in F:\RPL\Simaba_Projec\core\Model.php:23
+Stack trace:
+#0 F:\RPL\Simaba_Projec\core\Model.php(23): PDOStatement->execute(Array)
+#1 F:\RPL\Simaba_Projec\core\Model.php(51): Model->query('INSERT INTO use...', Array)
+#2 F:\RPL\Simaba_Projec\tests\run_tests.php(118): Model->insert(Array)
+#3 F:\RPL\Simaba_Projec\tests\run_tests.php(40): TestSuite->testTC03()
+#4 F:\RPL\Simaba_Projec\tests\run_tests.php(524): TestSuite->run()
+#5 {main}
+  thrown in F:\RPL\Simaba_Projec\core\Model.php on line 23
+[02-Jul-2026 20:08:31 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Stok tidak mencukupi untuk barang 1 in F:\RPL\Simaba_Projec\app\models\Peminjaman.php:128
+Stack trace:
+#0 F:\RPL\Simaba_Projec\tests\run_tests.php(393): Peminjaman->createLoan(3, Array, '2026-07-02', '2026-07-05', 'Kemah')
+#1 F:\RPL\Simaba_Projec\tests\run_tests.php(50): TestSuite->testTC14()
+#2 F:\RPL\Simaba_Projec\tests\run_tests.php(543): TestSuite->run()
+#3 {main}
+  thrown in F:\RPL\Simaba_Projec\app\models\Peminjaman.php on line 128
+[02-Jul-2026 21:15:04 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_menwa.audit_log' doesn't exist in F:\RPL\Simaba_Projec\core\Model.php:22
+Stack trace:
+#0 F:\RPL\Simaba_Projec\core\Model.php(22): PDO->prepare('SELECT l.*, u.u...')
+#1 F:\RPL\Simaba_Projec\app\models\AuditLogModel.php(50): Model->query('SELECT l.*, u.u...', Array)
+#2 F:\RPL\Simaba_Projec\app\controllers\AuditController.php(26): AuditLogModel->getLogsWithFilters('', '', '', '', '')
+#3 F:\RPL\Simaba_Projec\public\index.php(61): AuditController->index()
+#4 {main}
+  thrown in F:\RPL\Simaba_Projec\core\Model.php on line 22
+[02-Jul-2026 21:15:05 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_menwa.audit_log' doesn't exist in F:\RPL\Simaba_Projec\core\Model.php:22
+Stack trace:
+#0 F:\RPL\Simaba_Projec\core\Model.php(22): PDO->prepare('SELECT l.*, u.u...')
+#1 F:\RPL\Simaba_Projec\app\models\AuditLogModel.php(50): Model->query('SELECT l.*, u.u...', Array)
+#2 F:\RPL\Simaba_Projec\app\controllers\AuditController.php(26): AuditLogModel->getLogsWithFilters('', '', '', '', '')
+#3 F:\RPL\Simaba_Projec\public\index.php(61): AuditController->index()
+#4 {main}
+  thrown in F:\RPL\Simaba_Projec\core\Model.php on line 22
+[02-Jul-2026 21:15:14 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_menwa.audit_log' doesn't exist in F:\RPL\Simaba_Projec\app\controllers\DashboardController.php:36
+Stack trace:
+#0 F:\RPL\Simaba_Projec\app\controllers\DashboardController.php(36): PDO->query('SELECT l.*, u.u...')
+#1 F:\RPL\Simaba_Projec\public\index.php(61): DashboardController->index()
+#2 {main}
+  thrown in F:\RPL\Simaba_Projec\app\controllers\DashboardController.php on line 36
+[02-Jul-2026 21:15:16 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_menwa.notifikasi' doesn't exist in F:\RPL\Simaba_Projec\core\Model.php:22
+Stack trace:
+#0 F:\RPL\Simaba_Projec\core\Model.php(22): PDO->prepare('SELECT COUNT(*)...')
+#1 F:\RPL\Simaba_Projec\app\models\Notifikasi.php(28): Model->query('SELECT COUNT(*)...', Array)
+#2 F:\RPL\Simaba_Projec\app\controllers\NotifikasiController.php(110): Notifikasi->getUnreadCount(1)
+#3 F:\RPL\Simaba_Projec\public\index.php(61): NotifikasiController->unreadList()
+#4 {main}
+  thrown in F:\RPL\Simaba_Projec\core\Model.php on line 22
+[03-Jul-2026 09:02:29 Asia/Jakarta] Database Connection Error: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[03-Jul-2026 09:02:34 Asia/Jakarta] Database Connection Error: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[03-Jul-2026 09:02:51 Asia/Jakarta] Failed to write audit log: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[03-Jul-2026 09:03:00 Asia/Jakarta] Database Connection Error: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[03-Jul-2026 09:03:58 Asia/Jakarta] Database Connection Error: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[04-Jul-2026 02:32:53 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:32:53 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:32:53 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:32:53 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:33:05 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:33:05 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:33:05 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
+[04-Jul-2026 02:33:05 Asia/Jakarta] PHP Warning:  Undefined array key "kode_barang" in C:\xampp\htdocs\Simaba_Projec\app\views\barang\index.php on line 139
